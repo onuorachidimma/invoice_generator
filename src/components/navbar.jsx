@@ -8,8 +8,9 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../public/logo.svg";
+import Logo from "../components/Logo";
 import Buttons from "./buttons";
+import Footer from "./footer";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -24,7 +25,8 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="border border-[#E6EFF7]">
+    <div>
+      <Disclosure as="nav" className="border border-[#E6EFF7]">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -43,7 +45,8 @@ export default function Example() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center w-[30%]">
+            <Logo logoBg="#005BAC" nameFill="#4D4D4D"/>
+            {/* <div className="flex flex-shrink-0 items-center w-[30%]">
               <img alt="Your Company" src={Logo} className="h-8 w-auto" />
 
               <svg
@@ -59,7 +62,7 @@ export default function Example() {
                   fill="#4D4D4D"
                 />
               </svg>
-            </div>
+            </div> */}
             <div className="hidden sm:ml-6 sm:block w-[40%]">
               <div className="flex  justify-between">
                 {navigation.map((item) => (
@@ -174,5 +177,10 @@ export default function Example() {
         </div>
       </DisclosurePanel>
     </Disclosure>
+
+<div>
+<Footer />
+</div>
+    </div>
   );
 }
