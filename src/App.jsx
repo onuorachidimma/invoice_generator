@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Example from "./components/navbar";
+import SignUp from "./pages/signUp";
 import './App.css'
 
 const App = () =>  {
@@ -7,7 +7,7 @@ const App = () =>  {
   return (
     <>
       <Routes>
-      <Route path="/" element={<Example />} />
+      <Route path="/" element={<SignUp />} />
       </Routes>
     </>
   )
