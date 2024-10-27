@@ -25,7 +25,7 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <div>
+    <div className="bg-white">
       <Disclosure as="nav" className="border border-[#E6EFF7]">
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -62,8 +62,8 @@ export default function NavBar() {
                   fill="#4D4D4D"
                 />
               </svg>
-            </div> */}
-              <div className="hidden sm:ml-6 sm:block w-[40%]">
+              </div> */}
+              <div className="hidden sm:ml-6 sm:block lg:w-[40%]">
                 <div className="flex  justify-between">
                   {navigation.map((item) => (
                     <a
@@ -96,7 +96,7 @@ export default function NavBar() {
             </div>
 
             {/* ###### Sign in and Sign up ######### */}
-            <div className="">
+            <div className="hidden lg:block">
               <Buttons whiteShortButton="Sign in" blueShortButton="Sign up" />
             </div>
             {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -177,8 +177,6 @@ export default function NavBar() {
           </div>
         </DisclosurePanel>
       </Disclosure>
-
-      
     </div>
   );
 }
