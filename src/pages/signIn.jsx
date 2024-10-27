@@ -1,13 +1,12 @@
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import SignUpSignInImages from "../components/signUpin-images";
-import { SignUpSvg, SignInSvg } from "../assets/images/svg";
+import { SignInSvg } from "../assets/images/svg";
 import { Link } from "react-router-dom";
 import { SignInSiggnUpButtons } from "../components/buttons";
-import SignUpSignInHeader from "../components/SignInSignUpHeader";
-// import Buttons from "../components/buttons";
-import GoogleFacebookSigninButtons from "../components/googleFacebookSignIn";
 import SignUpForm from "../components/signUpForm";
+import GoogleFacebookSigninButtons from "../components/googleFacebookSignIn";
+import SignUpSignInHeader from "../components/SignInSignUpHeader";
 
 const SignUp = () => {
   return (
@@ -15,16 +14,16 @@ const SignUp = () => {
       <div className="bg-[#FAFAFA]">
         <NavBar />
 
-        <div className="flex mx-auto w-[80%] p-2  mt-[75px]">
+        <div className="flex mx-auto w-[80%] p-2  mt-[75px] ">
           <div className="hidden lg:block w-[20%]">
-            <SignUpSignInImages signUpSignInImages={SignUpSvg} />
+            <SignUpSignInImages signUpSignInImages={SignInSvg} />
           </div>
 
           <div className=" w-[70%] mb-10">
             <SignUpForm>
               <div className="text-center mb-[20px] ">
-                <SignUpSignInHeader header="Sign Up" />
-                <GoogleFacebookSigninButtons facebookGoogleSignupButtonBg="#BEEFD6" />
+                <SignUpSignInHeader header="Sign In" />
+                <GoogleFacebookSigninButtons facebookGoogleSignupButtonBg="#EAFAF1" />
 
                 <fieldset className="border border-[#BABFC5] border-b-0 border-l-0 border-r-0">
                   <legend className="p-[4px] text-[#82868C]">Or</legend>
@@ -44,24 +43,14 @@ const SignUp = () => {
                     </div>
 
                     <div className="w-[45%] mb-4">
-                      <label className="pb-0.05 block" htmlFor="email">
-                        Email
+                      <label className="pb-0.05 block" htmlFor="password">
+                        Password
                       </label>
-                      <input
-                        className="block w-[100%] bg-transparent border h-11 rounded-lg border-[#BABFC5]"
-                        type="email"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <label className="pb-0.05 block" htmlFor="password">
-                      Password{" "}
                       <input
                         className="block w-[100%] bg-transparent border h-11 rounded-lg border-[#BABFC5]"
                         type="password"
                       />
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -76,10 +65,10 @@ const SignUp = () => {
                 </p>
                 <div className="text-center ">
                   <SignInSiggnUpButtons
-                    blueLongprompt="Sign up"
-                    question="Do you already have an account?"
-                    pageName="Log in"
-                    route="/login"
+                    blueLongprompt="Sign In"
+                    question="Don't have an account?"
+                    pageName="Sign up"
+                    route="/"
                   />
                 </div>
               </div>
