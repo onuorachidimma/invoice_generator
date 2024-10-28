@@ -1,4 +1,5 @@
-const Buttons = (props) => {
+import { Link } from "react-router-dom";
+export const Buttons = (props) => {
   return (
     <>
       <div className="flex">
@@ -18,14 +19,24 @@ const Buttons = (props) => {
           </button>
         </div>
       </div>
-      <div>
-        <p>{props.blueLongprompt}</p>
-      </div>
-      <div>
-        <p>{props.whiteLongprompt}</p>
-      </div>
     </>
   );
 };
 
-export default Buttons;
+export const SignInSiggnUpButtons = (props) => {
+  return (
+    <>
+      <div className="bg-[#00417A] rounded mb-8">
+        <button
+          className=" text-[white] rounded p-3 w-[100%] "
+          type="submit"
+        >
+          {props.blueLongprompt}
+        </button>
+      </div>
+      <div>
+        <p>{props.question} <Link className="text-[#005BAC]" to={props.route}>{props.pageName}</Link></p>
+      </div>
+    </>
+  );
+};
