@@ -16,11 +16,11 @@ const SignUp = () => {
         <NavBar />
 
         <div className="flex mx-auto w-[80%] p-2  mt-[75px]">
-          <div className="hidden lg:block w-[20%]">
+          <div className="hidden xl:block w-[20%]">
             <SignUpSignInImages signUpSignInImages={SignUpSvg} />
           </div>
 
-          <div className=" w-[70%] mb-10">
+          <div className=" mx-auto xl:mx-0 md:w-[90%] xl:w-[70%] mb-10">
             <SignUpForm>
               <div className="text-center mb-[20px] ">
                 <SignUpSignInHeader header="Sign Up" />
@@ -30,10 +30,10 @@ const SignUp = () => {
                   <legend className="p-[4px] text-[#82868C]">Or</legend>
                 </fieldset>
               </div>
-              <div>
+              <div className=" ">
                 <div className="">
-                  <div className="flex justify-between">
-                    <div className="w-[48%] mb-4">
+                  <div className="flex flex-wrap md:flex-nowrap justify-between ">
+                    <div className="w-[100%] md:w-[48%] mb-4">
                       <label className="pb-0.05 block" htmlFor="name">
                         Name
                       </label>
@@ -43,7 +43,7 @@ const SignUp = () => {
                       />
                     </div>
 
-                    <div className="w-[45%] mb-4">
+                    <div className="w-[100%] md:w-[48%] mb-4">
                       <label className="pb-0.05 block" htmlFor="email">
                         Email
                       </label>

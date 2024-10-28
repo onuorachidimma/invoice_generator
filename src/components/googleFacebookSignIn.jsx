@@ -1,7 +1,7 @@
 const GoogleFacebookSigninButtons = (props) => {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex flex-wrap justify-center xl:flex-nowrap xl:justify-between xl:gap-2">
         <div className="">
           <button>
             <svg

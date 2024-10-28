@@ -4,7 +4,7 @@ import SignUpSignInHeader from "./SignInSignUpHeader";
 const SignUpForm = ({ children }) => {
   return (
     <>
-      <div className="w-[65%] mx-auto">
+      <div className="w-[100%] xl:w-[65%] xl:mx-auto">
         <form className="" action="">
           {children}
         </form>
